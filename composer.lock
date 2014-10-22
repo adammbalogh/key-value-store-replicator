@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "760f4d42ebc4b1a036599fee89f98277",
+    "hash": "96f6440fcab6b4bd0992a5fbba66a989",
     "packages": [
         {
             "name": "adammbalogh/key-value-store",
@@ -68,6 +68,59 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "adammbalogh/key-value-store-memory",
+            "version": "0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adammbalogh/key-value-store-memory.git",
+                "reference": "6bc1bf5c6610b19142c1684db40b15623f7c0a25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adammbalogh/key-value-store-memory/zipball/6bc1bf5c6610b19142c1684db40b15623f7c0a25",
+                "reference": "6bc1bf5c6610b19142c1684db40b15623f7c0a25",
+                "shasum": ""
+            },
+            "require": {
+                "adammbalogh/key-value-store": "~0.5.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.2",
+                "phpunit/phpunit": "~4.2.5",
+                "satooshi/php-coveralls": "dev-master",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AdammBalogh\\KeyValueStore\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Balogh",
+                    "email": "baloghbh@gmail.com",
+                    "homepage": "http://code-chronicle.blogspot.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Key-value memory store through a simple php array.",
+            "keywords": [
+                "array",
+                "key",
+                "key-value",
+                "key-value-memory",
+                "store",
+                "value"
+            ],
+            "time": "2014-10-20 17:41:18"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.4",
@@ -887,16 +940,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "6288ebbf6fa3ed2b2ff2d69c356fbaaf4f0971a7"
+                "reference": "0d9bf79554d2a999da194a60416c15cf461eb67d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/6288ebbf6fa3ed2b2ff2d69c356fbaaf4f0971a7",
-                "reference": "6288ebbf6fa3ed2b2ff2d69c356fbaaf4f0971a7",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/0d9bf79554d2a999da194a60416c15cf461eb67d",
+                "reference": "0d9bf79554d2a999da194a60416c15cf461eb67d",
                 "shasum": ""
             },
             "require": {
@@ -908,7 +961,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -933,7 +986,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2014-10-07 09:23:16"
+            "time": "2014-10-22 06:38:05"
         },
         {
             "name": "sebastian/exporter",

@@ -14,7 +14,7 @@
 
 This library provides a layer to replicate commands on key value stores.
 
-All the read (get, getTtl, has) operations run only on the source adapter, others on both.
+All the read (```get```, ```getTtl```, ```has```) operations run only on the source adapter, others on both.
 
 Check out the [abstract library](https://github.com/adammbalogh/key-value-store) to see the other adapters and the Api.
 

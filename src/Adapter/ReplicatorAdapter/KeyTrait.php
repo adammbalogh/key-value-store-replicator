@@ -13,13 +13,11 @@ trait KeyTrait
      */
     public function delete($key)
     {
-        try {
-            $this->source->delete($key);
-        } catch (\Exception $e) {
-            throw $e;
+        if ($this->source->delete($key)) {
+            return $this->replica->delete($key);
         }
 
-        return $this->replica->delete($key);
+        return false;
     }
 
     /**
@@ -34,13 +32,11 @@ trait KeyTrait
      */
     public function expire($key, $seconds)
     {
-        try {
-            $this->source->expire($key, $seconds);
-        } catch (\Exception $e) {
-            throw $e;
+        if ($this->source->expire($key, $seconds)) {
+            return $this->replica->expire($key, $seconds);
         }
 
-        return $this->replica->expire($key, $seconds);
+        return false;
     }
 
     /**
@@ -82,12 +78,10 @@ trait KeyTrait
      */
     public function persist($key)
     {
-        try {
-            $this->source->persist($key);
-        } catch (\Exception $e) {
-            throw $e;
+        if ($this->source->persist($key)) {
+            return $this->replica->persist($key);
         }
 
-        return $this->replica->persist($key);
+        return false;
     }
 }

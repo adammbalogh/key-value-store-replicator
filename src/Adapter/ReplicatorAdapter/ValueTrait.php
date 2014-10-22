@@ -28,12 +28,10 @@ trait ValueTrait
      */
     public function set($key, $value)
     {
-        try {
-            $this->source->set($key, $value);
-        } catch (\Exception $e) {
-            throw $e;
+        if ($this->source->set($key, $value)) {
+            return $this->replica->set($key, $value);
         }
 
-        return $this->replica->set($key, $value);
+        return false;
     }
 }
